@@ -1,3 +1,4 @@
+/* ==== GLOBAL STYLES ==== */
 body {
     background: #e2e1e1;
     padding: 0;
@@ -19,6 +20,13 @@ body {
     -ms-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+p {
+    margin-top:30px;
+}
+
+#message {
+    transition:all 0.5s ease;
 }
 /* ==== EXPRESSION STYLES ==== */
 
@@ -80,11 +88,9 @@ body {
 .button_container table td button:focus {
 	outline:0;
 }
-
 .button_container table td button:active {
 	transform:scale(0.92);
 }
-
 .digit {
     background: #2C2D2D;
 }

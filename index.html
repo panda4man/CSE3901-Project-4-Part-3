@@ -16,44 +16,95 @@
 <body>
     <div class="wrapper">
         <div class="expression_container">
-            <input type="text" value="(1*2-3*(4/(9-6))*20)" id="expression">
+            <input type="text" value="" id="expression">
         </div>
         <div class="button_container">
             <table>
                 <tr>
-                    <td><button class="digit">7</button></td>
-                    <td><button class="digit">8</button></td>
-                    <td><button class="digit">9</button></td>
-                    <td><button class="operator">&divide;</button></td>
-                    <td><button class="operator">(</button></td>
-                    <td><button class="operator">MC</button></td>
-                    <td rowspan="2"><button class="operator">C</button></td>
+                    <td>
+                        <button value="7" onclick="termCapture(this)" class="digit">7</button>
+                    </td>
+                    <td>
+                        <button value="8" onclick="termCapture(this)" class="digit">8</button>
+                    </td>
+                    <td>
+                        <button value="9" onclick="termCapture(this)" class="digit">9</button>
+                    </td>
+                    <td>
+                        <button value="/" onclick="termCapture(this)" class="operator">&divide;</button>
+                    </td>
+                    <td>
+                        <button value="(" onclick="termCapture(this)" class="operator">(</button>
+                    </td>
+                    <td>
+                        <button onclick="memClear(this)" class="operator">MC</button>
+                    </td>
+                    <td rowspan="2">
+                        <button onclick="clearOne(this)" class="operator">C</button>
+                    </td>
                 </tr>
                 <tr>
-                    <td><button class="digit">4</button></td>
-                    <td><button class="digit">5</button></td>
-                    <td><button class="digit">6</button></td>
-                    <td><button class="operator">x</button></td>
-                    <td><button class="operator">)</button></td>
-                    <td><button class="operator">MR</button></td>
+                    <td>
+                        <button value="4" onclick="termCapture(this)" class="digit">4</button>
+                    </td>
+                    <td>
+                        <button value="5" onclick="termCapture(this)" class="digit">5</button>
+                    </td>
+                    <td>
+                        <button value="6" onclick="termCapture(this)" class="digit">6</button>
+                    </td>
+                    <td>
+                        <button value="*" onclick="termCapture(this)" class="operator">x</button>
+                    </td>
+                    <td>
+                        <button value=")" onclick="termCapture(this)" class="operator">)</button>
+                    </td>
+                    <td>
+                        <button onclick="memRecall(this)" class="operator">MR</button>
+                    </td>
                 </tr>
                 <tr>
-                    <td><button class="digit">1</button></td>
-                    <td><button class="digit">2</button></td>
-                    <td><button class="digit">3</button></td>
-                    <td><button class="operator">-</button></td>
-                    <td rowspan="2"><button class="operator">=</button></td>
-                    <td><button class="operator">M+</button></td>
-                    <td rowspan="2"><button class="operator">AC</button></td>
+                    <td>
+                        <button value="1" onclick="termCapture(this)" class="digit">1</button>
+                    </td>
+                    <td>
+                        <button value="2" onclick="termCapture(this)" class="digit">2</button>
+                    </td>
+                    <td>
+                        <button value="3" onclick="termCapture(this)" class="digit">3</button>
+                    </td>
+                    <td>
+                        <button value="-" onclick="termCapture(this)" class="operator">-</button>
+                    </td>
+                    <td rowspan="2">
+                        <button onclick="calculate()" class="operator">=</button>
+                    </td>
+                    <td>
+                        <button class="operator" onclick="memAdd(this)">M+</button>
+                    </td>
+                    <td rowspan="2">
+                        <button onclick="AC(this)" class="operator">AC</button>
+                    </td>
                 </tr>
                 <tr>
-                    <td colspan="2"><button class="digit">0</button></td>
-                    <td><button class="digit">.</button></td>
-                    <td><button class="operator">+</button></td>
-                    <td><button class="operator">M-</button></td>
+                    <td colspan="2">
+                        <button value="0" onclick="termCapture(this)" class="digit">0</button>
+                    </td>
+                    <td>
+                        <button value="." onclick="termCapture(this)" class="digit">.</button>
+                    </td>
+                    <td>
+                        <button value="+" onclick="termCapture(this)" class="operator">+</button>
+                    </td>
+                    <td>
+                        <button onclick="memSub(this)" class="operator">M-</button>
+                    </td>
                 </tr>
             </table>
         </div>
+    </div>
+    <div>
+        <center><p id="message"></p></center>
     </div>
     <script type="text/javascript" src="index.js"></script>
 </body>
