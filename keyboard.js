@@ -17,7 +17,7 @@ function getKeyboardInput(input) {
     if (input == 13) {
         evaluated = true;
         calculate();
-    } else if (input == 67) {
+    } else if (input == 27) {
         AC();
     }
 
