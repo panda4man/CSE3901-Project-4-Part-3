@@ -13,10 +13,10 @@
     <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
 </head>
 
-<body>
+<body onkeydown="getKeyboardInput(event.keyCode)">
     <div class="wrapper">
         <div class="expression_container">
-            <input type="text" value="" id="expression" onkeydown="if(event.keyCode==13){calculate();}">
+            <input type="text" value="" id="expression" autofocus>
         </div>
         <div class="button_container">
             <table>
@@ -107,6 +107,7 @@
         <center><p id="message"></p></center>
     </div>
     <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="keyboard.js"></script>
 </body>
 
 </html>

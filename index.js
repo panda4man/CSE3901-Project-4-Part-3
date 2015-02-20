@@ -28,7 +28,7 @@ function valueOfFactor() {
     return value;
 }
 
-function valueOfTerm () {
+function valueOfTerm() {
     var value = valueOfFactor();
     while (source.charAt(0) == '*' || source.charAt(0) == '/') {
         var op = source.charAt(0);
@@ -79,7 +79,7 @@ function termCapture(self) {
 function clearOne(self) {
     var expression = document.getElementById('expression');
     var oldExp = expression.value;
-    var newExp = oldExp.slice(0, oldExp.length-1);
+    var newExp = oldExp.slice(0, oldExp.length - 1);
     expression.value = newExp;
 }
 
@@ -91,7 +91,7 @@ function memAdd(self) {
     var memory = localStorage.getItem('calc_memory') || 0;
     memory = parseFloat(memory);
     var value = document.getElementById('expression').value;
-    if(isDigit(value)) {
+    if (isDigit(value)) {
         value = parseFloat(value);
         memory += value;
         localStorage.setItem('calc_memory', memory);
@@ -103,7 +103,7 @@ function memSub(self) {
     var memory = localStorage.getItem('calc_memory') || 0;
     memory = parseFloat(memory);
     var value = document.getElementById('expression').value;
-    if(isDigit(value)) {
+    if (isDigit(value)) {
         value = parseFloat(value);
         memory -= value;
         localStorage.setItem('calc_memory', memory);
@@ -126,11 +126,12 @@ function memRecall(self) {
 function message(msg) {
     var el = document.getElementById('message');
     el.style.opacity = "0.0";
-    setTimeout(function () {
+    setTimeout(function() {
         el.innerHTML = msg;
         el.style.opacity = "1.0";
-        setTimeout(function () {
+        setTimeout(function() {
             el.style.opacity = "0.0";
-        },2000);
+        }, 2000);
     }, 500);
 }
+
