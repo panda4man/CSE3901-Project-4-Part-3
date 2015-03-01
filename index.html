@@ -16,7 +16,7 @@
 <body onkeydown="getKeyboardInput(event.keyCode)">
     <div class="wrapper">
         <div class="expression_container">
-            <input type="text" value="" id="expression" autofocus>
+            <input type="text" value="" id="expression" autofocus readonly>
         </div>
         <div class="button_container">
             <table>
@@ -34,7 +34,7 @@
                         <button value="/" onclick="termCapture(this)" class="operator">&divide;</button>
                     </td>
                     <td>
-                        <button value="(" onclick="termCapture(this)" class="operator">(</button>
+                        <button value="^" onclick="termCapture(this)" class="operator">x^y</button>
                     </td>
                     <td>
                         <button onclick="memClear(this)" class="operator">MC</button>
@@ -57,7 +57,7 @@
                         <button value="*" onclick="termCapture(this)" class="operator">x</button>
                     </td>
                     <td>
-                        <button value=")" onclick="termCapture(this)" class="operator">)</button>
+                        <button value="sqrt" onclick="sq()" class="operator">&#8730x</button>
                     </td>
                     <td>
                         <button onclick="memRecall(this)" class="operator">MR</button>
@@ -102,6 +102,14 @@
                 </tr>
             </table>
         </div>
+    </div>
+    <div>
+        <h1>Keyboard Shortcuts</h1>
+        <p>numbers: 0-9</p>
+        <p>clear: esc</p>
+        <p>evaluate: enter</p>
+        <p>power: e</p>
+        <p>square root: s (takes square of entire expression)</p>
     </div>
     <div>
         <center><p id="message"></p></center>

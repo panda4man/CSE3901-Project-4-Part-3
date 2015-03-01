@@ -65,6 +65,13 @@ function memRecall(self) {
     expression.value = expression.value + memory;
 }
 
+function sq(){
+    var expression = document.getElementById('expression');
+    source = expression.value;
+    var value = buildExpressionTree(source);
+    expression.value = Math.sqrt(value).toString();
+}
+
 /* ==== MESSAGE METHODS ==== */
 function message(msg) {
     var el = document.getElementById('message');
