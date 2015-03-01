@@ -84,4 +84,3 @@ function message(msg) {
         }, 2000);
     }, 500);
 }
-
