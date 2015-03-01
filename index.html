@@ -14,6 +14,9 @@
 </head>
 
 <body onkeydown="getKeyboardInput(event.keyCode)">
+    <div style="position:absolute; top:30px; left:50%; margin-left:-150px; width:300px">
+        <center><p id="message"></p></center>
+    </div>
     <div class="wrapper">
         <div class="expression_container">
             <input type="text" value="" id="expression" autofocus readonly>
@@ -110,9 +113,6 @@
         <p>evaluate: enter</p>
         <p>power: e</p>
         <p>square root: s (takes square of entire expression)</p>
-    </div>
-    <div>
-        <center><p id="message"></p></center>
     </div>
     <script type="text/javascript" src="index.js"></script>
     <script type="text/javascript" src="keyboard.js"></script>
