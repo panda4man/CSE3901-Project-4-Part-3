@@ -22,7 +22,7 @@ function getKeyboardInput(input) {
         keyInput(input - 96);
     } else if (input > 47 && input < 58) {
         keyInput(input - 48);
-    } else if (input == 8) {
+    } else if (input == 46) {
         clearOne();
     } else if (input == 107) {
         keyInput("+");
@@ -43,7 +43,21 @@ function getKeyboardInput(input) {
     } else if (input == 69) {
         keyInput("^");
     } else if (input == 83) {
-        sq();
+        if (event.altKey) {
+            sq();
+        }
+    } else if (input == 187) {
+        if (event.shiftKey) {
+            keyInput("+");
+        }
+    } else if (input == 38) {
+        if (event.ctrlKey) {
+            keyInput("^");
+        }
+    } else if (input == 56) {
+        if (event.shiftKey) {
+            keyInput("*");
+        }
     }
 }
 
