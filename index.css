@@ -65,31 +65,31 @@ p {
 .button_container table tr {
 	line-height:60px;
 }
+.button_container table tr td[rowspan]{
+    line-height:134px;
+}
 .button_container table td {
     text-align: center;
     box-sizing:border-box;
     width:14.2857%;
 }
-.button_container table td button {
-	font-size: 25px;
-	color:white;
-	width:100%;
-	height:100%;
-	padding:0;
-	border:none;
-	border-top: 1px solid #404140;
-	-webkit-transition: all 0.1s linear;
+.button_container table td div {
+    font-size: 25px;
+    color:white;
+    width:100%;
+    height:100%;
+    padding:0;
+    border:none;
+    border-top: 1px solid #404140;
+    -webkit-transition: all 0.1s linear;
     -o-transition: all 0.1s linear;
     -moz-transition: all 0.1s linear;
     -ms-transition: all 0.1s linear;
     -kthtml-transition: all 0.1s linear;
     transition: all 0.1s linear;
 }
-.button_container table td button:focus {
-	outline:0;
-}
-.button_container table td button:active {
-	transform:scale(0.92);
+.button_container table td div:active {
+    transform:scale(0.92);
 }
 .digit {
     background: #2C2D2D;

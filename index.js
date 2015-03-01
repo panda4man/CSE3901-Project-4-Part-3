@@ -13,7 +13,7 @@ function calculate() {
 
 /* ==== CALCULATOR BUTTON CONTROLS ==== */
 function termCapture(self) {
-    var term = self.value;
+    var term = self.getAttribute('data-value');
     var expression = document.getElementById('expression');
     var newExp = expression.value + term;
     expression.value = newExp;
