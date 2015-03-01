@@ -1,4 +1,4 @@
-/* Nodes for BST constructor */
+/* Node constructor */
 var Node = function(root) {
     this.root = root;
     this.left = null;
@@ -6,6 +6,7 @@ var Node = function(root) {
     return this;
 }
 
+/* Copy Node */
 Node.prototype.copyNode = function() {
     var copy = new Node(this.root);
     if (this.left != null) {
@@ -17,39 +18,22 @@ Node.prototype.copyNode = function() {
     return copy;
 }
 
-/* Insert */
+/* Insert Nodes into existing expression tree*/
 Node.prototype.insert = function(newNode) {
 
     if (!isNaN(newNode.root)) { // If newNode.root is a number
-        if (this.left === null) {
-            this.left = newNode;
-        } else if (this.right === null) {
+        if (this.right === null) {
             this.right = newNode;
         } else {
             this.right.insert(newNode);
         }
     } else if (newNode.root == "+" || newNode.root == "-") {
-        if (!isNaN(this.root)) { // if this.root is a number
-            var copy = this.copyNode();
-            this.root = newNode.root;
-            this.left = copy;
-            this.right = null;
-        } else if (this.root == "+" || this.root == "-") { // merge later if no problems
-            var copy = this.copyNode();
-            this.root = newNode.root;
-            this.left = copy;
-            this.right = null;
-        } else if (this.root == "*" || this.root == "/") {
-            // make current tree left node of newNode
-
-        }
+        var copy = this.copyNode();
+        this.root = newNode.root;
+        this.left = copy;
+        this.right = null;
     } else if (newNode.root == "*" || newNode.root == "/") {
-        if (!isNaN(this.root)) {
-            var copy = this.copyNode();
-            this.root = newNode.root;
-            this.left = copy;
-            this.right = null;
-        } else if (this.root == "*" || this.root == "/") {
+        if (!isNaN(this.root) || this.root == "*" || this.root == "/") {
             var copy = this.copyNode();
             this.root = newNode.root;
             this.left = copy;
@@ -60,6 +44,7 @@ Node.prototype.insert = function(newNode) {
     }
 }
 
+/* recusively evaluate expression tree */
 Node.prototype.evaluate = function() {
     var result;
 
@@ -78,7 +63,6 @@ Node.prototype.evaluate = function() {
 }
 
 var BinarySearchTree = function(initRoot) {
-
     this.tree = new Node(initRoot);
     return this;
 }
@@ -88,8 +72,10 @@ Node.prototype.insertNode = function(insert) {
     this.insert(newNode);
 }
 
+/*
+ * Take an expression in string form and returns value
+ */
 function buildExpressionTree(expr) {
-
 
     var expArray = expr.split("");
     var num = "";
