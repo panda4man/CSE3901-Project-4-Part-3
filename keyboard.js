@@ -1,7 +1,6 @@
 /*
- * Adds some keyboard control functionality
+ * Adds some keyboard functionality
  */
-
 var evaluated = false;
 
 function getKeyboardInput(input) {
@@ -13,7 +12,7 @@ function getKeyboardInput(input) {
         evaluated = false;
     }
 
-
+    /* check key input */
     if (input == 13) {
         evaluated = true;
         calculate();
@@ -46,11 +45,6 @@ function getKeyboardInput(input) {
     } else if (input == 83) {
         sq();
     }
-
-
-
-
-
 }
 
 

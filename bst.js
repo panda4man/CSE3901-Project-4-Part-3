@@ -73,19 +73,13 @@ Node.prototype.evaluate = function() {
     return result;
 }
 
-var BinarySearchTree = function(initRoot) {
-    this.tree = new Node(initRoot);
-    return this;
-}
-
+/* create node from value and insert into tree */
 Node.prototype.insertNode = function(insert) {
     var newNode = new Node(insert);
     this.insert(newNode);
 }
 
-/*
- * Take an expression in string form and returns value
- */
+/* Takes an expression in string form and returns value */
 function buildExpressionTree(expr) {
 
     var expArray = expr.split("");
