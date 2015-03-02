@@ -1,0 +1,40 @@
+Authors: Don Herre & Andrew Clinton
+Description: This document contains information on calculator designed and developed for part 3 of project 4.
+================
+
+DESCRIPTION: This project involved the design and development of a calculator web application. The features of the calculator include the following: addition, subtraction, multiplication, division, exponents and square root.
+
+STRUCTURE: The html for this project was created by Andrew Clinton. The markup consists of divs and tables creating a simple grid structure.
+
+STYLE: The css style sheet that houses all of the styling was created by Andrew Clinton. Styling was partially inspired by the basic Android calculator.
+
+LOGIC: The javascript that implements all of the interactivity for the calculator is broken up into three files:
+
+	index.js (Andrew Clinton)- This file was houses much of the logic behind the clickable buttons on the calculator.
+
+	bst.js (Don Herre)- This file uses JavaScript prototyping and a binary search tree structure that forms expression trees that can be solved with recursion. 
+
+	keyboard.js (Don Herre)- This file interprets keyboard input to add ease of use. This feature is somewhat experimental. Some features remained slightly buggy depending on the system and browser used.
+
+TESTING: 
+
+	To test the calculator and eliminate bugs in the code various expressions were input into the calculator and compared with output from known working calculators.
+	----------------------------------------------------------------------------------------------
+	| INPUT                | OUTPUT              | REASON                                        |  
+	----------------------------------------------------------------------------------------------
+	| -436/44*7+77-2*3     | 1.6363636363636402  | leading negative, multiple order of operations|
+    ----------------------------------------------------------------------------------------------
+	| 562^2^2+2-6*9/4-3    | 99757432321.5       | multiple exponential operations               |
+	---------------------------------------------------------------------------------------------- 
+	| sqrt(999)            | 31.606961258558215  | square root                                   |
+	---------------------------------------------------------------------------------------------- 
+	| 99.3/0.6             | 165.5               | decimals                                      |
+	----------------------------------------------------------------------------------------------
+	| 5687-33287           | -27600              | negative result                               |
+	----------------------------------------------------------------------------------------------
+	Each of these results was verified.
+
+	Testing was also done with each of the buttons to make sure of functionality. This includes making sure each individual button does what one would expect on a normal calculator.
+
+CONCLUSION: The final product of this project is working calculator with most of the basic features of a typical calculator. 
+
